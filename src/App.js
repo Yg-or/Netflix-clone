@@ -18,9 +18,11 @@ function App() {
 
 
   if (!data) {
-    return <div className="loading">
-      <img src='https://c.tenor.com/I6kN-6X7nhAAAAAj/loading-buffering.gif' />
-    </div>
+    return <div className="App">
+    <Header />
+    <FirstArea />
+    
+  </div>
   }
 
   return (
