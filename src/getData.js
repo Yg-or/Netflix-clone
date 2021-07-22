@@ -45,6 +45,21 @@ async function getData() {
             title: 'Comédia',
             items: await fetchAll('/discover/movie?with_genres=35&language=pt-BR&api_key=')
         },
+        {
+            slug: 'horror',
+            title: 'Terror',
+            items: await fetchAll('/discover/movie?with_genres=27&language=pt-BR&api_key=')
+        },
+        {
+            slug: 'romance',
+            title: 'Romance',
+            items: await fetchAll('/discover/movie?with_genres=10749&language=pt-BR&api_key=')
+        },
+        {
+            slug: 'documentary',
+            title: 'Documentários',
+            items: await fetchAll('/discover/movie?with_genres=99&language=pt-BR&api_key=')
+        },
     ];
 }
 
