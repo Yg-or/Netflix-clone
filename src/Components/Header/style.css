@@ -1,0 +1,22 @@
+.headerArea {
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: black;
+}
+
+.logo {
+    height: 70%;
+}
+
+.link {
+    height: 60%;
+}
+.imageProfile {
+    height: 50px;
+    object-fit: contain;
+    border-radius: 10px;
+}
