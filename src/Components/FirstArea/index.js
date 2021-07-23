@@ -25,8 +25,8 @@ function FirstArea({filmes}) {
         <p className = "ratingAndRelease"><span className="rating">{selecionado.nota}</span> {selecionado.lancamento.split('-')[0]}</p>
         <p className = "overview">{selecionado.overview}</p>
         <div className = "btnArea">
-            <div className = "watchButton"><p>► Assistir</p></div>
-            <div className = "listButton"><p>+ Minha Lista</p></div>
+            <nav className = "watchButton"><p>► Assistir</p></nav>
+            <nav className = "listButton"><p>+ Minha Lista</p></nav>
         </div>
     </div>
 }
