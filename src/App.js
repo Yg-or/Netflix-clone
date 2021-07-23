@@ -10,25 +10,23 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      setData(await getData())
+      let temp = await getData();
+      setData(temp);
     }
 
     fetchData();
   }, []);
 
-
   if (!data) {
     return <div className="App">
     <Header />
-    <FirstArea />
-    
   </div>
   }
 
   return (
     <div className="App">
       <Header />
-      <FirstArea />
+      <FirstArea filmes={data}/>
       {
         data.map((categoria) => {
           return <ListItems itens={categoria} key={categoria.slug} />

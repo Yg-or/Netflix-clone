@@ -1,17 +1,21 @@
 const baseApiUrl = 'https://api.themoviedb.org/3';
 const API_KEY = '6f38b6b6f47f06d99cbba9581c5c00b3';
-const baseUrlImages = 'https://image.tmdb.org/t/p/w300';
+const baseUrlImages = 'https://image.tmdb.org/t/p/w500';
+const baseUrlBackDrop = 'https://image.tmdb.org/t/p/w1280';
 
 async function fetchAll(endpoint) {
     const response = await fetch(`${baseApiUrl}${endpoint}${API_KEY}`);
     const data = await response.json();
     const temp = data.results.map((filme) => {
         return {
-            fundoImagem: `${baseUrlImages}${filme.backdrop_path}`,
+            fundoImagem: `${baseUrlBackDrop}${filme.backdrop_path}`,
             titulo: filme.name,
             overview: filme.overview,
             fundoPoster: `${baseUrlImages}${filme.poster_path}`,
-            key: filme.id
+            key: filme.id,
+            nota: filme.vote_average,
+            lancamento: filme.first_air_date,
+            genero: filme.genre_ids,
         }
     });
 
@@ -23,7 +27,7 @@ async function getData() {
         {
             slug: 'originals',
             title: 'Originais do Netflix',
-            items: await fetchAll('/discover/tv/?with_network=213&language=pt-BR&api_key=')
+            items: await fetchAll('/discover/tv?with_network=213&language=pt-BR&api_key=')
         },
         {
             slug: 'tending',

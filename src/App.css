@@ -6,7 +6,7 @@ body {
   width: 100%;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  background-color: black;
+  background-color: rgb(24,20,20)
 }
 
 * {
