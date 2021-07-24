@@ -58,5 +58,10 @@
     right: 0;
 }
 
+@media screen and (max-width: 1024px) {
+    .leftIcon, .rightIcon {
+        opacity: 1;
+    }
+}
 
 

@@ -20,7 +20,8 @@ function ListItems({ itens }) {
     }
 
     function rightClick() {
-        const tamanho = document.getElementById('listaFilmes').childElementCount * 143;
+        const filho = Math.ceil(document.getElementById('listaFilmes').firstChild.getBoundingClientRect().width) * 1.1;
+        const tamanho = document.getElementById('listaFilmes').childElementCount * filho;
         let x = scroll - Math.round(window.innerWidth/2);
         if (window.innerWidth - tamanho > x) {
             x = window.innerWidth - tamanho -60;
@@ -40,10 +41,6 @@ function ListItems({ itens }) {
         <div className="rightIcon" onClick={rightClick}>
             <NavigateNextIcon style={{ fontSize: 50 }} />
         </div>
-
-
-
-
 
         <div id="listaFilmes" className="movieArea" style={{ 
             marginLeft: scroll
