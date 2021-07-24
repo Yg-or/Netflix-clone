@@ -8,7 +8,6 @@ function selectMovie(filmes) {
             aleatorio = Math.floor(Math.random() * filmes.items.length)
         }
     }
-
     return(filmes.items[aleatorio])
 }
 
@@ -22,7 +21,7 @@ function FirstArea({filmes}) {
         }}
      >
         <p className = "movieTitle">{selecionado.titulo}</p>
-        <p className = "ratingAndRelease"><span className="rating">{selecionado.nota}</span> {selecionado.lancamento.split('-')[0]}</p>
+        <p className = "ratingAndRelease"><span className="rating">{selecionado.nota}</span> {selecionado.lancamento.split('-')[0]} </p>
         <p className = "overview">{selecionado.overview}</p>
         <div className = "btnArea">
             <nav className = "watchButton"><p>► Assistir</p></nav>

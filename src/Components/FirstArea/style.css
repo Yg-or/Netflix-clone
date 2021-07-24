@@ -1,8 +1,9 @@
 .areaTotal {
-    height: 55vh;
+    height: 64vh;
     background-color: black;
     padding: 15px;
     box-sizing: border-box;
+    padding-top: 9vh;
 
     background-image: linear-gradient(90deg, rgba(0,0,0,0.9752275910364145) 31%, rgba(9,9,9,0.7035189075630253) 57%, rgba(0,0,0,0.4738270308123249) 81%), var(--img);
     background-repeat: no-repeat;

@@ -7,26 +7,46 @@ import ListItems from './Components/ListItems';
 
 function App() {
   const [data, setData] = useState();
+  const [principal, setPrincipal] = useState();
+  const [black, setBlack] = useState('');
 
   useEffect(() => {
+    
+    
     async function fetchData() {
       let temp = await getData();
       setData(temp);
+      setPrincipal(temp)
     }
 
     fetchData();
   }, []);
 
-  if (!data) {
+  useEffect(() => {
+    function scrollListener() {
+      if (window.scrollY > 20) {
+        setBlack('black')
+      } else {
+        setBlack('')
+      }
+    }
+    
+    window.addEventListener('scroll', scrollListener);
+
+    
+
+  });
+
+  if (!data && !principal) {
     return <div className="App">
-    <Header />
+    <Header black={black}/>
   </div>
   }
 
   return (
     <div className="App">
-      <Header />
-      <FirstArea filmes={data}/>
+      <Header black={black}/>
+      <FirstArea filmes={principal}/>
       {
         data.map((categoria) => {
           return <ListItems itens={categoria} key={categoria.slug} />

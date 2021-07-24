@@ -10,7 +10,7 @@ body {
   min-width: 360px;
 }
 
-div {
+div:not(.leftIcon, .rightIcon) {
   min-width: 360px;
 }
 

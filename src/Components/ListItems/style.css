@@ -1,8 +1,14 @@
 .listArea {
     height: 30vh;
     box-sizing: border-box;
+    color: white;
     
 
+}
+
+.listArea:hover .leftIcon,
+.listArea:hover .rightIcon {
+    opacity: 1;
 }
 
 .title {
@@ -20,11 +26,36 @@
     overflow-y: hidden;
     padding: 0 10px;
 
+    transition: all ease 0.5s;
+
     
 }
 
 .movieArea::-webkit-scrollbar {
     display: none;
+}
+
+.leftIcon, .rightIcon {
+    position: absolute;
+    z-index: 9999;
+    width: 40px;
+    height: 24vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.leftIcon {
+    left: 0;
+}
+
+.rightIcon {
+    right: 0;
 }
 
 

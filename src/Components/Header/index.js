@@ -1,8 +1,8 @@
 import './style.css';
 import Logo from '../../img/logo.png'
 
-function Header() {
-    return <div className="headerArea">
+function Header({black}) {
+    return <header className={black}>
         <img src={Logo} className="logo" alt="Logo" />
         <nav className="navArea">
             <a href='/' className = "link">
@@ -10,7 +10,7 @@ function Header() {
             </a>
         </nav>
 
-    </div>
+    </header>
 
 }
 
