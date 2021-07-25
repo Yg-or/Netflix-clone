@@ -24,6 +24,7 @@
     flex-direction: row;
     align-items: center;
     overflow-y: hidden;
+    overflow: hidden;
     padding: 0 10px;
 
     transition: all ease 0.5s;

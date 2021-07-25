@@ -20,7 +20,7 @@ function ListItems({ itens }) {
     }
 
     function rightClick() {
-        const filho = Math.ceil(document.getElementById('listaFilmes').firstChild.getBoundingClientRect().width) * 1.1;
+        const filho = (document.getElementById('listaFilmes').firstChild.getBoundingClientRect().width * 1.12).toFixed(0);
         const tamanho = document.getElementById('listaFilmes').childElementCount * filho;
         let x = scroll - Math.round(window.innerWidth/2);
         if (window.innerWidth - tamanho > x) {
@@ -28,8 +28,6 @@ function ListItems({ itens }) {
         }
         setScroll(x)
     }
-
-
 
     return <div className="listArea">
         <p className="title">{itens.title}</p>
