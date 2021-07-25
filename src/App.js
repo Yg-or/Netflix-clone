@@ -30,12 +30,13 @@ function App() {
         setBlack('')
       }
     }
-    
     window.addEventListener('scroll', scrollListener);
 
+    return () => {
+      window.removeEventListener('scroll', scrollListener)
+    }
     
-
-  });
+  }, []);
 
   if (!data && !principal) {
     return <div className="App">

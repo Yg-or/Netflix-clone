@@ -24,7 +24,6 @@
     flex-direction: row;
     align-items: center;
     overflow-y: hidden;
-    overflow: hidden;
     padding: 0 10px;
 
     transition: all ease 0.5s;
@@ -61,12 +60,7 @@
 
 @media screen and (max-width: 1024px) {
     .leftIcon, .rightIcon {
-        opacity: 1;
-    }
-
-    .movieArea {
-        overflow: hidden;
+        opacity: 0;
+        display: none;
     }
 }
-
-
