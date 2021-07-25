@@ -63,6 +63,10 @@
     .leftIcon, .rightIcon {
         opacity: 1;
     }
+
+    .movieArea {
+        overflow: hidden;
+    }
 }
 
 
